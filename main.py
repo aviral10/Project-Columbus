@@ -98,8 +98,8 @@ def main():
     start = time.time()
     temp = ['data/sample.py', 'data/sample.cpp']
     taskList = []
-    for i in range(1):
-        taskList.append(temp[randint(1, 1)])
+    for i in range(5):
+        taskList.append(temp[randint(0, 1)])
     asyncio.run(runTask(taskList))
     end = time.time()
     total_time = end - start
