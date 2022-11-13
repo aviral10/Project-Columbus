@@ -94,7 +94,7 @@ async def api_latency(timeout):
 
 def main():
     api_lat = asyncio.run(api_latency(default_timeout))
-    print(api_lat)
+    print("API Latency: ", api_lat, " seconds")
     start = time.time()
     temp = ['data/sample.py', 'data/sample.cpp']
     taskList = []
@@ -103,9 +103,9 @@ def main():
     asyncio.run(runTask(taskList))
     end = time.time()
     total_time = end - start
-    print("Time: ", max(0,total_time - api_lat))
-    for ele in results:
-        print(ele)
+    print("All Requests processed in: ", max(0,total_time - api_lat), " seconds")
+    for i, ele in enumerate(results):
+        print(f"File {i}: ", ele)
 
 
 if __name__ == "__main__":
