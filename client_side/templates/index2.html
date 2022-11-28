@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css" />
+    <title>Home Page</title>
+</head>
+<script>
+    if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
+<body>
+    <h1 class="title">Columbus</h1>
+    <div class="subtitle">Submission Area</div>
+    <div class="main-containers">
+        <div class="containers">
+            <div class="leftColumn">
+                <div class="img-div">
+                    <img data-src="/static/img/left.svg"
+                        class="left-img" alt="" width="175" height="159"
+                        src="/static/img/left.svg">
+                    <div class="featuresColumn"><span> </span></div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="full-coverage">
+                    <form id="form" enctype="multipart/form-data " method="POST">
+                        {% csrf_token %}
+                        <div class="textarea-div">
+<!--                            <input type="textarea" class="textarea" spellcheck="false" placeholder="Enter text or upload file"-->
+<!--                                name="text">-->
+                            <pre>{{resp}}</pre>
+                        </div>
+                        <div class="buttons-area">
+                            <input type="submit" class="submit-button">
+<!--                            <div>-->
+<!--                                <button class="upload-button" type="button"-->
+<!--                                    onclick="document.getElementById('file-input').click()">-->
+<!--                                    <span class="upload-button-span">-->
+<!--                                        <span class="upload-button-span-1">-->
+<!--                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none">-->
+<!--                                                <path d="M0.5 10.5V12.5C0.5 13.6046 1.39543-->
+<!--                                                        14.5 2.5 14.5H12.5C13.6046 14.5 14.5-->
+<!--                                                        13.6046 14.5 12.5V10.5M4 7L7.5 10.5M7.5-->
+<!--                                                        10.5L11 7M7.5 10.5V0.5" stroke="currentColor" stroke-linecap="round">-->
+<!--                                                </path>-->
+<!--                                            </svg>-->
+<!--                                        </span>-->
+<!--                                        <span class="upload-button-span">Upload a file</span>-->
+<!--                                    </span>-->
+<!--                                </button>-->
+<!--                                <input type="file" id="file-input" name="source_file" />-->
+<!--                            </div>-->
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="rightColumn">
+                <div class="img-div">
+                    <img data-src="/static/img/right.svg"
+                        class="right-img" alt="" width="175" height="180"
+                        src="/static/img/right.svg">
+                    <div class="featuresColumn"><span> </span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

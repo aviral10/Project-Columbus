@@ -14,6 +14,7 @@ api_url = 'https://wandbox.org/api'
 default_timeout = 5
 headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
 
+
 def readCode(path):
     with open(path, 'r') as f:
         code = f.readlines()
